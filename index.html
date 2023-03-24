@@ -1,0 +1,40 @@
+<!DocType html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="HTML,JavaScript">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Common numbers in arrays</title>	
+	
+	</head>
+	
+	<body>
+		<script>
+			var b=[4,8,2,9,3,4,2];
+			var a=[2,4,1,5,9];
+			function commonNum(a,b){
+			var c=[];
+			for(i=0; i<a.length; i++){
+				for(j=0; j<b.length; j++){
+					if(a[i]==b[j]){
+						var flag=true;
+							for(k=0; k<=c.length; k++){
+								if(a[i]==c[k]){
+									flag=false;
+								}
+							}
+							if(flag){
+							c.push(a[i]);
+							}
+					}
+				}
+			}
+			return c;
+			}
+			console.log(commonNum(a,b));
+			document.write(commonNum(a,b));
+			
+		</script>
+	</body>
+</html>
